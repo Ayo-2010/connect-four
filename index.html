@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect Four — Tabletop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="room">
+<header class="top">
+<div class="brand">
+<p class="eyebrow">The tabletop club</p>
+<h1>Four in a row</h1>
+<p class="lede">Drop a disc. Build a line. Own the table.</p>
+</div>
+<div class="mode-switch" role="group" aria-label="Choose game mode">
+<button id="modeCpu" class="mode is-active" type="button" aria-pressed="true">Vs Computer</button>
+<button id="modeFriend" class="mode" type="button" aria-pressed="false">2 Players</button>
+</div>
+</header>
+<section class="layout">
+<div class="game-area">
+<div class="turn-banner" data-turn="1" aria-live="polite">
+<span class="turn-dot" aria-hidden="true"></span>
+<strong id="status">Your turn</strong>
+<span class="turn-keys">Keys 1–7</span>
+</div>
+<div class="board-shell">
+<div class="column-guides" aria-hidden="true"></div>
+<div class="board-wrap">
+<div id="board" class="board" role="grid" aria-label="Connect Four board"></div>
+<div class="overlay" id="overlay" hidden>
+<span class="overlay-kicker">Round complete</span>
+<h2 id="overlayText">You win!</h2>
+<p class="overlay-note" id="overlayNote">Four in a row.</p>
+<button id="playAgainBtn" class="btn btn-primary" type="button">Play again</button>
+</div>
+</div>
+</div>
+<p class="hint">Click a column or press 1–7 · N for a new game</p>
+</div>
+<aside class="sidebar">
+<section class="score-panel">
+<div class="panel-head">
+<p>Session score</p>
+<span class="panel-badge">Best of the day</span>
+</div>
+<div class="score-row">
+<div class="player-score">
+<span class="score-disc score-disc-red" aria-hidden="true"></span>
+<div>
+<span id="playerLabel">You</span>
+<strong id="scorePlayer">0</strong>
+</div>
+</div>
+<div class="score-divider" aria-hidden="true">—</div>
+<div class="player-score player-score-right">
+<div>
+<span id="cpuLabel">Computer</span>
+<strong id="scoreCpu">0</strong>
+</div>
+<span class="score-disc score-disc-yellow" aria-hidden="true"></span>
+</div>
+</div>
+<p class="streak-line">Best win streak <strong id="bestStreak">0</strong></p>
+</section>
+<div class="tools">
+<button id="newGame" class="btn btn-secondary" type="button">New game</button>
+<button id="resetScore" class="btn btn-quiet" type="button">Reset score</button>
+</div>
+<section class="note-card">
+<span class="note-mark" aria-hidden="true">✦</span>
+<h2>How to win</h2>
+<p>Connect four discs in a row — sideways, upright or diagonally. The centre columns are prime real estate.</p>
+<div class="mini-board" aria-hidden="true">
+<span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span class="mini-red"></span><span></span><span></span><span></span>
+<span></span><span class="mini-yellow"></span><span class="mini-red"></span><span class="mini-red"></span><span class="mini-red"></span><span class="mini-red"></span><span></span>
+<span></span><span></span><span class="mini-yellow"></span><span class="mini-yellow"></span><span class="mini-yellow"></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+</section>
+</aside>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -13,6 +13,8 @@ A warm, tactile Connect Four board with a competent computer opponent and a two-
 - New game and reset-score buttons
 - A clear turn indicator for both modes
 
+- A How to play popup with the controls and scoring rules.
+
 ## Running it
 
 Open `index.html` in a browser. There is no build step and no dependencies to install.

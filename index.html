@@ -71,6 +71,7 @@
 <div class="tools">
 <button id="newGame" class="btn btn-secondary" type="button">New game</button>
 <button id="resetScore" class="btn btn-quiet" type="button">Reset score</button>
+<button id="helpBtn" class="btn btn-quiet" type="button">How to play</button>
 </div>
 <section class="note-card">
 <span class="note-mark" aria-hidden="true">✦</span>
@@ -88,6 +89,24 @@
 </aside>
 </section>
 </main>
+
+  <div class="help-modal" id="helpModal" hidden>
+    <div class="help-backdrop" data-close></div>
+    <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <button class="help-close" id="helpClose" type="button" aria-label="Close">×</button>
+      <h2 class="help-title" id="helpTitle">How to play</h2>
+      <p class="help-lede">Take turns dropping discs into the grid. The first player to line up four in a row wins the round.</p>
+      <ol class="help-steps">
+        <li>Choose <kbd>Vs Computer</kbd> or <kbd>2 Players</kbd>.</li>
+        <li>Click a column, or press <kbd>1</kbd> to <kbd>7</kbd>, to drop your disc.</li>
+        <li>A disc falls to the lowest free slot in the column you pick.</li>
+        <li>Line up four of your colour across, down or diagonally to win.</li>
+        <li>The computer takes the centre when it can and blocks your lines when it must.</li>
+        <li>Press <kbd>N</kbd> for a new game. The session score and best streak are kept.</li>
+      </ol>
+    </div>
+  </div>
+
 <script src="script.js"></script>
 </body>
 </html>
